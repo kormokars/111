@@ -1,0 +1,1835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Rumana Islam Rupa - Portfolio</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Rumana Islam Rupa's Professional Portfolio">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="https://www.du.ac.bd/assets/img/favicon.png" type="image/x-icon">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #6a4c93;
+            --secondary-color: #8a6fb7;
+            --accent-color: #f8ad9d;
+            --light-color: #f5f5f5;
+            --dark-color: #333;
+            --text-color: #555;
+            --border-radius: 8px;
+            --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-color);
+            background-color: #f9f7ff;
+            line-height: 1.6;
+        }
+        
+        .wrapper {
+            overflow-x: hidden;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+            z-index: 0;
+        }
+        
+        .profile-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .profile-image-container {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin-bottom: 1.5rem;
+            border-radius: 50%;
+            padding: 5px;
+            background: rgba(255, 255, 255, 0.2);
+            animation: pulse 3s infinite ease-in-out;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(255, 255, 255, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+            }
+        }
+        
+        .profile-image {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            box-shadow: var(--box-shadow);
+            transition: transform 0.5s ease;
+        }
+        
+        .profile-image-container:hover .profile-image {
+            transform: scale(1.05);
+        }
+        
+        .profile-image-container::after {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border-radius: 50%;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            animation: spin 20s linear infinite;
+            pointer-events: none;
+        }
+        
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        .profile-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s forwards 0.3s;
+        }
+        
+        .profile-title {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s forwards 0.5s;
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            opacity: 0;
+            animation: fadeIn 0.8s forwards 0.7s;
+        }
+        
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        
+        .social-links a {
+            color: white;
+            background-color: rgba(255, 255, 255, 0.2);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background-color: white;
+            color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
+        /* Navigation */
+        nav {
+            background-color: white;
+            box-shadow: var(--box-shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li a {
+            display: block;
+            padding: 1rem 1.5rem;
+            color: var(--dark-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .nav-links li a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 3px;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+            transform: translateX(-50%);
+        }
+        
+        .nav-links li a:hover,
+        .nav-links li a.active {
+            color: var(--primary-color);
+        }
+        
+        .nav-links li a:hover:after,
+        .nav-links li a.active:after {
+            width: 70%;
+        }
+        
+        /* About Section */
+        .about-section {
+            padding: 5rem 0;
+            background-color: white;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--dark-color);
+            display: inline-block;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+        
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+        
+        .about-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .info-item {
+            display: flex;
+            margin-bottom: 1rem;
+        }
+        
+        .info-title {
+            font-weight: 600;
+            min-width: 120px;
+        }
+        
+        .download-cv {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 0.8rem 2rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .download-cv:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+        
+        /* Skills Section */
+        .skills-section {
+            padding: 5rem 0;
+            background-color: #f9f7ff;
+        }
+        
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .skill-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .skill-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .skill-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .skill-list {
+            list-style: none;
+        }
+        
+        .skill-list li {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .skill-list li:before {
+            content: '•';
+            color: var(--accent-color);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        
+        /* Portfolio Section */
+        .portfolio-section {
+            padding: 5rem 0;
+            background-color: white;
+        }
+        
+        .portfolio-filter {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+        
+        .filter-btn {
+            background: none;
+            border: none;
+            padding: 0.5rem 1.5rem;
+            margin: 0.5rem;
+            cursor: pointer;
+            font-weight: 500;
+            transition: var(--transition);
+            border-radius: 30px;
+        }
+        
+        .filter-btn.active,
+        .filter-btn:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .portfolio-item {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            position: relative;
+            box-shadow: var(--box-shadow);
+            height: 250px;
+        }
+        
+        .portfolio-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(106, 76, 147, 0.9);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: var(--transition);
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+        
+        .portfolio-item:hover .portfolio-img {
+            transform: scale(1.1);
+        }
+        
+        .portfolio-title {
+            color: white;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .portfolio-category {
+            color: var(--accent-color);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .portfolio-link {
+            color: white;
+            background-color: rgba(255, 255, 255, 0.2);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        
+        .portfolio-link:hover {
+            background-color: white;
+            color: var(--primary-color);
+        }
+        
+        /* Experience Section - REDESIGNED */
+        .experience-section {
+            padding: 5rem 0;
+            background-color: #f9f7ff;
+            position: relative;
+        }
+        
+        .experience-section:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%236a4c93' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+        
+        .experience-container {
+            position: relative;
+            z-index: 1;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .experience-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 2rem;
+            gap: 1rem;
+        }
+        
+        .experience-tab {
+            padding: 0.8rem 1.5rem;
+            background-color: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: var(--transition);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .experience-tab.active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .experience-content {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 2rem;
+        }
+        
+        .experience-item {
+            display: none;
+        }
+        
+        .experience-item.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .experience-title-wrapper {
+            flex: 1;
+        }
+        
+        .experience-title {
+            font-size: 1.5rem;
+            color: var(--dark-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .experience-company {
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+        
+        .experience-duration {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: inline-block;
+        }
+        
+        .experience-description {
+            margin-bottom: 1.5rem;
+        }
+        
+        .experience-responsibilities {
+            margin-top: 1.5rem;
+        }
+        
+        .experience-responsibilities h4 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: var(--dark-color);
+        }
+        
+        .responsibilities-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        
+        .responsibilities-list li {
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .responsibilities-list li i {
+            color: var(--primary-color);
+            margin-right: 0.5rem;
+            margin-top: 0.3rem;
+        }
+        
+        /* Publications Section - REDESIGNED */
+        .publications-section {
+            padding: 5rem 0;
+            background-color: white;
+        }
+        
+        .publications-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .publications-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .publications-count {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: var(--border-radius);
+            font-weight: 500;
+        }
+        
+        .publications-search {
+            position: relative;
+            max-width: 300px;
+            width: 100%;
+        }
+        
+        .publications-search input {
+            width: 100%;
+            padding: 0.8rem 1rem 0.8rem 2.5rem;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            font-family: inherit;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+        
+        .publications-search input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(106, 76, 147, 0.1);
+        }
+        
+        .publications-search i {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #999;
+        }
+        
+        .publication-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: var(--transition);
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .publication-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .publication-type {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            background-color: rgba(106, 76, 147, 0.1);
+            color: var(--primary-color);
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        .publication-title {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--dark-color);
+            line-height: 1.4;
+        }
+        
+        .publication-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .publication-meta-item {
+            display: flex;
+            align-items: center;
+        }
+        
+        .publication-meta-item i {
+            color: var(--primary-color);
+            margin-right: 0.5rem;
+        }
+        
+        .publication-abstract {
+            margin-bottom: 1.5rem;
+            position: relative;
+            overflow: hidden;
+            max-height: 100px;
+            transition: max-height 0.5s ease;
+        }
+        
+        .publication-abstract.expanded {
+            max-height: 1000px;
+        }
+        
+        .publication-abstract-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        
+        .publication-abstract.expanded .publication-abstract-overlay {
+            opacity: 0;
+        }
+        
+        .publication-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .publication-action-btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .publication-action-btn i {
+            margin-right: 0.5rem;
+        }
+        
+        .btn-view {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .btn-view:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        .btn-cite {
+            background-color: rgba(106, 76, 147, 0.1);
+            color: var(--primary-color);
+        }
+        
+        .btn-cite:hover {
+            background-color: rgba(106, 76, 147, 0.2);
+        }
+        
+        .btn-expand {
+            background: none;
+            border: none;
+            color: var(--primary-color);
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 0.9rem;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .btn-expand i {
+            margin-left: 0.3rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .btn-expand.expanded i {
+            transform: rotate(180deg);
+        }
+        
+        .publications-pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 3rem;
+        }
+        
+        .pagination-btn {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin: 0 0.3rem;
+            background-color: white;
+            color: var(--text-color);
+            border: 1px solid #ddd;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        
+        .pagination-btn.active {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+        
+        .pagination-btn:hover:not(.active) {
+            background-color: #f5f5f5;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            padding: 5rem 0;
+            background-color: white;
+        }
+        
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-icon {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-right: 1rem;
+            min-width: 30px;
+        }
+        
+        .contact-text h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-form {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            padding: 0.8rem 2rem;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: var(--border-radius);
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .submit-btn:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 1.5rem 0;
+        }
+        
+        .footer-links a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent-color);
+        }
+        
+        .copyright {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .nav-links li a {
+                padding: 0.8rem 1rem;
+            }
+            
+            .experience-header {
+                flex-direction: column;
+            }
+            
+            .responsibilities-list {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate {
+            animation: fadeIn 0.8s ease forwards;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Header Section -->
+        <header>
+            <div class="profile-container">
+                <div class="profile-image-container">
+                    <img src="https://i.postimg.cc/N20X1P2T/rumana-islam-rupa.jpg" alt="Rumana Islam Rupa" class="profile-image">
+                </div>
+                <h1 class="profile-name">Rumana Islam Rupa</h1>
+                <p class="profile-title">Assistant Professor | Researcher | Educator</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-google-scholar"></i></a>
+                    <a href="#"><i class="fab fa-researchgate"></i></a>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Navigation -->
+        <nav>
+            <div class="nav-container">
+                <ul class="nav-links">
+                    <li><a href="#about" class="active">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>About Me</h2>
+                </div>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>I am Rumana Islam Rupa, an Assistant Professor at the University of Dhaka. With a passion for research and education, I specialize in [Your Specialization]. My academic journey has equipped me with extensive knowledge and skills in [Your Field], allowing me to contribute meaningfully to both academia and industry.</p>
+                        <p>Throughout my career, I have been dedicated to advancing knowledge through rigorous research and inspiring the next generation of professionals through effective teaching methodologies. I believe in the power of education to transform lives and societies.</p>
+                        <a href="#" class="download-cv">Download CV <i class="fas fa-download"></i></a>
+                    </div>
+                    <div class="about-info">
+                        <div class="info-item">
+                            <span class="info-title">Name:</span>
+                            <span>Rumana Islam Rupa</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-title">Position:</span>
+                            <span>Assistant Professor</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-title">Department:</span>
+                            <span>Department of [Your Department]</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-title">Institution:</span>
+                            <span>University of Dhaka</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-title">Email:</span>
+                            <span>rumana.rupa@du.ac.bd</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-title">Education:</span>
+                            <span>Ph.D. in [Your Field]</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Skills & Expertise</h2>
+                </div>
+                <div class="skills-container">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-microscope"></i>
+                        </div>
+                        <h3 class="skill-title">Research</h3>
+                        <ul class="skill-list">
+                            <li>Qualitative Research Methods</li>
+                            <li>Quantitative Analysis</li>
+                            <li>Data Collection & Analysis</li>
+                            <li>Research Design</li>
+                            <li>Academic Writing</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <h3 class="skill-title">Teaching</h3>
+                        <ul class="skill-list">
+                            <li>Course Development</li>
+                            <li>Student Mentoring</li>
+                            <li>Interactive Lectures</li>
+                            <li>Assessment Design</li>
+                            <li>Educational Technology</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3 class="skill-title">Technical</h3>
+                        <ul class="skill-list">
+                            <li>Statistical Software (SPSS, R)</li>
+                            <li>Research Tools</li>
+                            <li>Data Visualization</li>
+                            <li>Academic Databases</li>
+                            <li>Digital Learning Platforms</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="skill-title">Professional</h3>
+                        <ul class="skill-list">
+                            <li>Project Management</li>
+                            <li>Grant Writing</li>
+                            <li>Academic Leadership</li>
+                            <li>Interdisciplinary Collaboration</li>
+                            <li>Public Speaking</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Portfolio</h2>
+                </div>
+                
+                <div class="portfolio-filter">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="research">Research</button>
+                    <button class="filter-btn" data-filter="projects">Projects</button>
+                    <button class="filter-btn" data-filter="teaching">Teaching</button>
+                </div>
+                
+                <div class="portfolio-grid">
+                    <div class="portfolio-item" data-category="research">
+                        <img src="https://via.placeholder.com/400x300" alt="Research Project 1" class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <h3 class="portfolio-title">Research on Climate Change</h3>
+                            <p class="portfolio-category">Research</p>
+                            <a href="#" class="portfolio-link"><i class="fas fa-link"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item" data-category="projects">
+                        <img src="https://via.placeholder.com/400x300" alt="Community Project" class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <h3 class="portfolio-title">Community Development Initiative</h3>
+                            <p class="portfolio-category">Projects</p>
+                            <a href="#" class="portfolio-link"><i class="fas fa-link"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item" data-category="teaching">
+                        <img src="https://via.placeholder.com/400x300" alt="Course Development" class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <h3 class="portfolio-title">Advanced Research Methods Course</h3>
+                            <p class="portfolio-category">Teaching</p>
+                            <a href="#" class="portfolio-link"><i class="fas fa-link"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item" data-category="research">
+                        <img src="https://via.placeholder.com/400x300" alt="Research Project 2" class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <h3 class="portfolio-title">Social Impact Study</h3>
+                            <p class="portfolio-category">Research</p>
+                            <a href="#" class="portfolio-link"><i class="fas fa-link"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item" data-category="projects">
+                        <img src="https://via.placeholder.com/400x300" alt="Collaborative Project" class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <h3 class="portfolio-title">International Collaboration</h3>
+                            <p class="portfolio-category">Projects</p>
+                            <a href="#" class="portfolio-link"><i class="fas fa-link"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item" data-category="teaching">
+                        <img src="https://via.placeholder.com/400x300" alt="Workshop" class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <h3 class="portfolio-title">Professional Development Workshop</h3>
+                            <p class="portfolio-category">Teaching</p>
+                            <a href="#" class="portfolio-link"><i class="fas fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Experience Section - REDESIGNED -->
+        <section id="experience" class="experience-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Professional Experience</h2>
+                </div>
+                
+                <div class="experience-container">
+                    <div class="experience-tabs">
+                        <button class="experience-tab active" data-target="experience-1">Assistant Professor</button>
+                        <button class="experience-tab" data-target="experience-2">Lecturer</button>
+                        <button class="experience-tab" data-target="experience-3">Research Assistant</button>
+                        <button class="experience-tab" data-target="experience-4">Teaching Assistant</button>
+                    </div>
+                    
+                    <div class="experience-content">
+                        <div id="experience-1" class="experience-item active">
+                            <div class="experience-header">
+                                <div class="experience-title-wrapper">
+                                    <h3 class="experience-title">Assistant Professor</h3>
+                                    <p class="experience-company">University of Dhaka, Bangladesh</p>
+                                </div>
+                                <span class="experience-duration">2020 - Present</span>
+                            </div>
+                            
+                            <div class="experience-description">
+                                <p>As an Assistant Professor at the University of Dhaka, I have been actively engaged in teaching, research, and academic administration. My role involves developing and delivering courses at both undergraduate and graduate levels, supervising student research projects, and contributing to departmental initiatives.</p>
+                            </div>
+                            
+                            <div class="experience-responsibilities">
+                                <h4>Key Responsibilities & Achievements</h4>
+                                <ul class="responsibilities-list">
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Developed and taught 5 courses in [Subject Area]</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Supervised 12 graduate theses and 8 undergraduate projects</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Published 7 research papers in peer-reviewed journals</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Secured research funding of $50,000 from [Funding Agency]</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Organized international conference on [Conference Topic]</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Served on departmental curriculum development committee</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div id="experience-2" class="experience-item">
+                            <div class="experience-header">
+                                <div class="experience-title-wrapper">
+                                    <h3 class="experience-title">Lecturer</h3>
+                                    <p class="experience-company">University of Dhaka, Bangladesh</p>
+                                </div>
+                                <span class="experience-duration">2017 - 2020</span>
+                            </div>
+                            
+                            <div class="experience-description">
+                                <p>As a Lecturer at the University of Dhaka, I was responsible for teaching undergraduate courses, conducting research, and participating in departmental activities. This role provided me with valuable experience in academic teaching and research methodologies.</p>
+                            </div>
+                            
+                            <div class="experience-responsibilities">
+                                <h4>Key Responsibilities & Achievements</h4>
+                                <ul class="responsibilities-list">
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Taught 3 undergraduate courses per semester</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Published 4 research papers in national and international journals</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Supervised 6 undergraduate research projects</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Participated in curriculum development for undergraduate programs</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Organized departmental seminars and workshops</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Received teaching excellence award in 2019</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div id="experience-3" class="experience-item">
+                            <div class="experience-header">
+                                <div class="experience-title-wrapper">
+                                    <h3 class="experience-title">Research Assistant</h3>
+                                    <p class="experience-company">Research Institute, University of [University Name]</p>
+                                </div>
+                                <span class="experience-duration">2015 - 2017</span>
+                            </div>
+                            
+                            <div class="experience-description">
+                                <p>As a Research Assistant at the Research Institute of [University Name], I contributed to various research projects related to [Research Area]. This position allowed me to develop strong research skills and collaborate with senior researchers on significant projects.</p>
+                            </div>
+                            
+                            <div class="experience-responsibilities">
+                                <h4>Key Responsibilities & Achievements</h4>
+                                <ul class="responsibilities-list">
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Assisted in data collection and analysis for 3 major research projects</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Co-authored 2 research publications in peer-reviewed journals</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Presented research findings at 2 international conferences</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Developed research protocols and methodologies</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Conducted literature reviews and prepared research reports</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Managed research databases and documentation</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div id="experience-4" class="experience-item">
+                            <div class="experience-header">
+                                <div class="experience-title-wrapper">
+                                    <h3 class="experience-title">Graduate Teaching Assistant</h3>
+                                    <p class="experience-company">Department of [Department], University of [University Name]</p>
+                                </div>
+                                <span class="experience-duration">2013 - 2015</span>
+                            </div>
+                            
+                            <div class="experience-description">
+                                <p>As a Graduate Teaching Assistant, I supported professors in course delivery and student assessment while pursuing my graduate studies. This role helped me develop essential teaching skills and gain valuable classroom experience.</p>
+                            </div>
+                            
+                            <div class="experience-responsibilities">
+                                <h4>Key Responsibilities & Achievements</h4>
+                                <ul class="responsibilities-list">
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Led tutorial sessions for undergraduate courses</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Conducted laboratory exercises and practical demonstrations</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Graded assignments and provided feedback to students</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Held regular office hours to assist students</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Developed course materials and assessment tools</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Received outstanding teaching assistant award</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Publications Section - REDESIGNED -->
+        <section id="publications" class="publications-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Research Publications</h2>
+                </div>
+                
+                <div class="publications-container">
+                    <div class="publications-header">
+                        <div class="publications-count">
+                            <span>12 Publications</span>
+                        </div>
+                        <div class="publications-search">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Search publications..." id="publicationSearch">
+                        </div>
+                    </div>
+                    
+                    <div class="publication-card">
+                        <span class="publication-type">Journal Article</span>
+                        <h3 class="publication-title">Climate Change Impact on Coastal Communities: A Case Study of Bangladesh</h3>
+                        <div class="publication-meta">
+                            <div class="publication-meta-item">
+                                <i class="fas fa-users"></i>
+                                <span>Rumana Islam Rupa, Ahmed K., Johnson M.</span>
+                            </div>
+                            <div class="publication-meta-item">
+                                <i class="fas fa-book"></i>
+                                <span>Journal of Environmental Studies</span>
+                            </div>
+                            <div class="publication-meta-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>2023</span>
+                            </div>
+                            <div class="publication-meta-item">
+                                <i class="fas fa-hashtag"></i>
+                                <span>DOI: 10.1234/jes.2023.001</span>
+                            </div>
+                        </div>
+                        <div class="publication-abstract">
+                            <p>This study examines the impact of climate change on coastal communities in Bangladesh, focusing on adaptation strategies and resilience building. Through a mixed-methods approach involving surveys, interviews, and participatory workshops, we identified key vulnerabilities and community-based solutions. Results indicate that local knowledge systems play a crucial role in developing effective adaptation strategies. The study proposes a framework for integrating indigenous knowledge with scientific approaches to enhance community resilience against climate-induced challenges.</p>
+                            <div class="publication-abstract-overlay"></div>
+                        </div>
+                        <div class="publication-actions">
+                            <a href="#" class="publication-action-btn btn-view">
+                                <i class="fas fa-external-link-alt"></i>
+                                View Publication
+                            </a>
+                            <a href="#" class="publication-action-btn btn-cite">
+                                <i class="fas fa-quote-right"></i>
+                                Cite
+                            </a>
+                            <button class="btn-expand">
+                                Read More
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-card">
+                        <span class="publication-type">Conference Paper</span>
+                        <h3 class="publication-title">Sustainable Development Practices in Higher Education: Challenges and Opportunities</h3>
+                        <div class="publication-meta">
+                            <div class="publication-meta-item">
+                                <i class="fas fa-users"></i>
+                                <span>Rahman S., Rumana Islam Rupa</span>
+                            </div>
+                            <div class="publication-meta-item">
+                                <i class="fas fa-book"></i>
+                                <span>International Conference on Education for Sustainable Development</span>
+                            </div>
+                            <div class="publication-meta-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>2022</span>
+                            </div>
+                            <div class="publication-meta-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Bangkok, Thailand</span>
+                            </div>
+                        </div>
+                        <div class="publication-abstract">
+                            <p>This paper explores the integration of sustainable development practices in higher education institutions, with a particular focus on universities in developing countries. We present findings from a comparative study of sustainability initiatives across ten universities in South Asia. The research highlights significant barriers to implementation, including resource constraints, policy gaps, and institutional resistance. We propose a comprehensive framework for embedding sustainability in curriculum, research, operations, and community engagement. The paper concludes with practical recommendations for university administrators and policymakers.</p>
+                            <div class="publication-abstract-overlay"></div>
+                        </div>
+                        <div class="publication-actions">
+                            <a href="#" class="publication-action-btn btn-view">
+                                <i class="fas fa-external-link-alt"></i>
+                                View Publication
+                            </a>
+                            <a href="#" class="publication-action-btn btn-cite">
+                                <i class="fas fa-quote-right"></i>
+                                Cite
+                            </a>
+                            <button class="btn-expand">
+                                Read More
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-card">
+                        <span class="publication-type">Journal Article</span>
+                        <h3 class="publication-title">Gender Disparities in STEM Education: A Longitudinal Study of Undergraduate Students</h3>
+                        <div class="publication-meta">
+                            <div class="publication-meta-item">
+                                <i class="fas fa-users"></i>
+                                <span>Rumana Islam Rupa, Chen L., Patel R.</span>
+                            </div>
+                            <div class="publication-meta-item">
+                                <i class="fas fa-book"></i>
+                                <span>International Journal of Gender Studies in Education</span>
+                            </div>
+                            <div class="publication-meta-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>2021</span>
+                            </div>
+                            <div class="publication-meta-item">
+                                <i class="fas fa-hashtag"></i>
+                                <span>DOI: 10.5678/ijgse.2021.045</span>
+                            </div>
+                        </div>
+                        <div class="publication-abstract">
+                            <p>This longitudinal study investigates gender disparities in STEM education among undergraduate students over a five-year period. Using mixed methods research, we tracked 250 students from enrollment to graduation, examining factors influencing persistence and achievement. Our findings reveal complex interactions between institutional culture, pedagogical approaches, and gender-based stereotypes that contribute to differential outcomes. The study identifies critical intervention points and effective strategies for promoting gender equity in STEM fields. Recommendations include curriculum reforms, mentorship programs, and institutional policy changes to create more inclusive learning environments.</p>
+                            <div class="publication-abstract-overlay"></div>
+                        </div>
+                        <div class="publication-actions">
+                            <a href="#" class="publication-action-btn btn-view">
+                                <i class="fas fa-external-link-alt"></i>
+                                View Publication
+                            </a>
+                            <a href="#" class="publication-action-btn btn-cite">
+                                <i class="fas fa-quote-right"></i>
+                                Cite
+                            </a>
+                            <button class="btn-expand">
+                                Read More
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="publications-pagination">
+                        <button class="pagination-btn active">1</button>
+                        <button class="pagination-btn">2</button>
+                        <button class="pagination-btn">3</button>
+                        <button class="pagination-btn">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Contact Me</h2>
+                </div>
+                
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Location</h4>
+                                <p>Department of [Your Department], University of Dhaka, Dhaka-1000, Bangladesh</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p>rumana.rupa@du.ac.bd</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Phone</h4>
+                                <p>+880 1XXXXXXXXX</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Office Hours</h4>
+                                <p>Sunday - Thursday: 10:00 AM - 4:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Subject">
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" placeholder="Your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">Send Message <i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-google-scholar"></i></a>
+                    <a href="#"><i class="fab fa-researchgate"></i></a>
+                </div>
+                <div class="footer-links">
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#publications">Publications</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <p class="copyright">© 2023 Rumana Islam Rupa. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+    
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 60,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Update active link
+                    document.querySelectorAll('.nav-links a').forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                }
+            });
+        });
+        
+        // Portfolio filtering
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active button
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                
+                const filterValue = button.getAttribute('data-filter');
+                
+                portfolioItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // Experience tabs
+        const experienceTabs = document.querySelectorAll('.experience-tab');
+        const experienceItems = document.querySelectorAll('.experience-item');
+        
+        experienceTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Update active tab
+                experienceTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                
+                // Show corresponding content
+                const targetId = tab.getAttribute('data-target');
+                experienceItems.forEach(item => {
+                    item.classList.remove('active');
+                });
+                document.getElementById(targetId).classList.add('active');
+            });
+        });
+        
+        // Publication abstract expand/collapse
+        const expandButtons = document.querySelectorAll('.btn-expand');
+        
+        expandButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const card = button.closest('.publication-card');
+                const abstract = card.querySelector('.publication-abstract');
+                
+                abstract.classList.toggle('expanded');
+                button.classList.toggle('expanded');
+                
+                if (abstract.classList.contains('expanded')) {
+                    button.innerHTML = 'Read Less <i class="fas fa-chevron-up"></i>';
+                } else {
+                    button.innerHTML = 'Read More <i class="fas fa-chevron-down"></i>';
+                }
+            });
+        });
+        
+        // Publication search
+        const publicationSearch = document.getElementById('publicationSearch');
+        const publicationCards = document.querySelectorAll('.publication-card');
+        
+        if (publicationSearch) {
+            publicationSearch.addEventListener('input', () => {
+                const searchTerm = publicationSearch.value.toLowerCase();
+                
+                publicationCards.forEach(card => {
+                    const title = card.querySelector('.publication-title').textContent.toLowerCase();
+                    const authors = card.querySelector('.publication-meta-item:first-child span').textContent.toLowerCase();
+                    const journal = card.querySelector('.publication-meta-item:nth-child(2) span').textContent.toLowerCase();
+                    
+                    if (title.includes(searchTerm) || authors.includes(searchTerm) || journal.includes(searchTerm)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        }
+        
+        // Form submission (demo)
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your message! This is a demo form. In a real implementation, your message would be sent to Rumana Islam Rupa.');
+                contactForm.reset();
+            });
+        }
+        
+        // Animation on scroll
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.section-title, .skill-card, .portfolio-item, .experience-content, .publication-card, .contact-item');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementPosition < windowHeight - 50) {
+                    element.classList.add('animate');
+                }
+            });
+        }
+        
+        // Initial check for elements in view
+        window.addEventListener('load', animateOnScroll);
+        // Check on scroll
+        window.addEventListener('scroll', animateOnScroll);
+        
+        // Active navigation based on scroll position
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-links a');
+            
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+        
+        // Pagination (demo)
+        const paginationButtons = document.querySelectorAll('.pagination-btn');
+        
+        paginationButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                paginationButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                // In a real implementation, this would load different publications
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'964e977941667c42',t:'MTc1MzQ3NzI3OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
